@@ -10,13 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Workout_Log">
         <activity
-            android:name="GymSpa.fit.workout_log.SignupActivity"
+            android:name=".HomeActivity"
             android:exported="false" />
         <activity
-            android:name="GymSpa.fit.workout_log.Login_Activity"
-            android:exported="false"/>
+            android:name=".SignupActivity"
+            android:exported="false" />
         <activity
-            android:name="GymSpa.fit.workout_log.Splash_Activity"
+            android:name=".Login_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Splash_Activity"
             android:exported="true"
             android:theme="@style/SplashTheme">
             <intent-filter>

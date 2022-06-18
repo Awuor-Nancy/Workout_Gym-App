@@ -60,11 +60,11 @@ class SignupActivity : AppCompatActivity() {
 
     }
     fun signin (){
-        var mail = etMail.toString()
-        var pass = etPass.toString()
-        var confirm = etConfirm.toString()
-        var firstName = etFisrtname.toString()
-        var lastName = etLastname.toString()
+        var mail = etMail.text.toString()
+        var pass = etPass.text.toString()
+        var confirm = etConfirm.text.toString()
+        var firstName = etFisrtname.text.toString()
+        var lastName = etLastname.text.toString()
 
         if (mail.isBlank()){
             tilMail.error = "Email is required"
