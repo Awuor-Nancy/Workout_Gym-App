@@ -9,5 +9,6 @@ class Splash_Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         startActivity(Intent(this,Login_Activity::class.java))
         startActivity(intent)
+        finish()
     }
 }

@@ -205,7 +205,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
-        android:text="Already a member?"
+        android:text="@string/already_a_member"
         android:textAllCaps="false"
         android:textColorLink="#0000FF"
         android:textSize="14sp"

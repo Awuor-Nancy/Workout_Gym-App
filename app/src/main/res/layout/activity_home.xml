@@ -17,14 +17,14 @@
         app:menu="@menu/bottom_nav_menu" />
 
 
-<!--    <androidx.fragment.app.FragmentContainerView-->
-<!--        android:id="@+id/fcView"-->
-<!--        android:name="GymSpa.fit.workout_log.PlanFragment"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="0dp"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/bnvHome"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        tools:layout="@layout/fragment_plan" />-->
+   <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fcvHome"
+        android:name="GymSpa.fit.workout_log.PlanFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bnvHome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/fragment_plan" />
 </androidx.constraintlayout.widget.ConstraintLayout>
