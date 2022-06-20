@@ -10,12 +10,10 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 class HomeActivity : AppCompatActivity() {
     lateinit var binding: ActivityHomeBinding
 
-//   lateinit var fcvHome : FragmentContainerView
-//    lateinit var bnvHome : BottomNavigationView
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
+        binding = ActivityHomeBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         castViews()
         setupBottonNav()
 
@@ -28,9 +26,9 @@ class HomeActivity : AppCompatActivity() {
         binding.bnvHome.setOnItemSelectedListener {item->
             when(item.itemId){
                 R.id.Plan ->{
-                    val transaction = supportFragmentManager.beginTransaction()
-                    transaction.replace(R.id.fcvHome, PlanFragment())
-                    transaction.commit()
+                    supportFragmentManager.beginTransaction()
+                    .replace(R.id.fcvHome, PlanFragment())
+                    .commit()
                     true
 
                 }
