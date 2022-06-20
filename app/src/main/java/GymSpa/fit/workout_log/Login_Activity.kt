@@ -42,7 +42,6 @@ class Login_Activity : AppCompatActivity() {
             binding.tilPassword.error = getString(R.string.Password_required)
             error= true
         }
-
         if (!error){
            startActivity(Intent(this, HomeActivity::class.java))
            finish()
