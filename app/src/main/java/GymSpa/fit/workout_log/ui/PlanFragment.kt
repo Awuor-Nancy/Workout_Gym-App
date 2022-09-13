@@ -1,5 +1,6 @@
-package GymSpa.fit.workout_log
+package GymSpa.fit.workout_log.ui
 
+import GymSpa.fit.workout_log.R
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater

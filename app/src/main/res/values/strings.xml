@@ -22,5 +22,6 @@
     <string name="profile_fragment">Profile Fragment</string>
     <string name="already_a_member">Already a member?</string>
     <string name="plan_fragment">Plan Fragment</string>
+    <string name="enter_phonenumber">enter_phoneNumber</string>
 
 </resources>

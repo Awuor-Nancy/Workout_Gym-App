@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#82B1FF"
-    tools:context=".HomeActivity">
+    tools:context=".ui.HomeActivity">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bnvHome"
@@ -19,7 +19,7 @@
 
    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fcvHome"
-        android:name="GymSpa.fit.workout_log.PlanFragment"
+        android:name="GymSpa.fit.workout_log.ui.PlanFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/bnvHome"
@@ -27,4 +27,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout="@layout/fragment_plan" />
+
+    <TextView
+        android:id="@+id/tvLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/bnvHome"
+        app:layout_constraintEnd_toEndOf="@+id/fcvHome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
