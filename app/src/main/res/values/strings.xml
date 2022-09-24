@@ -23,5 +23,6 @@
     <string name="already_a_member">Already a member?</string>
     <string name="plan_fragment">Plan Fragment</string>
     <string name="enter_phonenumber">enter_phoneNumber</string>
+    <string name="save">save</string>
 
 </resources>

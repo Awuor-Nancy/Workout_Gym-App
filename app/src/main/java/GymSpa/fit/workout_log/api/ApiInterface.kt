@@ -1,19 +1,24 @@
 package GymSpa.fit.workout_log.api
 
-import GymSpa.fit.workout_log.models.LoginRequest
-import GymSpa.fit.workout_log.models.LoginResponse
-import GymSpa.fit.workout_log.models.RegisterRequest
-import GymSpa.fit.workout_log.models.RegisterResponse
+import GymSpa.fit.workout_log.models.*
 import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.Body
+import retrofit2.http.GET
+import retrofit2.http.Header
 import retrofit2.http.POST
 
 interface ApiInterface {
     @POST("/register")
-    fun registerUser(@Body registerRequest: RegisterRequest):Response<RegisterResponse>
+    suspend fun registerUser(@Body registerRequest: RegisterRequest):Response<RegisterResponse>
 
     @POST("/login")
     suspend fun login(@Body loginRequest: LoginRequest):Response<LoginResponse>
+
+    @GET("/exercise-categories")
+    suspend fun fetchExerciseCategories(@Header("Authorization")accessToken:String): Response<List<ExerciseCategory>>
+
+    @GET("/profile")
+    suspend fun profile(@Body profileRequest: ProfileRequest):Response<ProfileResponse>
 
 }

@@ -6,6 +6,7 @@ import GymSpa.fit.workout_log.models.LoginRequest
 import GymSpa.fit.workout_log.models.LoginResponse
 import GymSpa.fit.workout_log.api.ApiClient
 import GymSpa.fit.workout_log.api.ApiInterface
+import GymSpa.fit.workout_log.utils.Constants
 import GymSpa.fit.workout_log.viewmodel.UserViewModel
 import android.content.Intent
 import android.content.SharedPreferences
@@ -29,7 +30,7 @@ class Login_Activity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        sharedPrefs = getSharedPreferences("WORKOUTLOG_PREFS", MODE_PRIVATE)
+        sharedPrefs = getSharedPreferences(Constants.prefsFile , MODE_PRIVATE)
 
         binding.btnLogin.setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
@@ -83,9 +84,11 @@ class Login_Activity : AppCompatActivity() {
 
         fun saveLoginDetails(loginResponse: LoginResponse){
             val editor = sharedPrefs.edit()
-            editor.putString("ACCESS_TOKEN", loginResponse.accessToken)
-            editor.putString("USER_ID", loginResponse.userId)
-            editor.putString("PROFILE_ID", loginResponse.profileId)
+            val token = "Bearer ${loginResponse.accessToken}"
+
+            editor.putString(Constants.accessToken, loginResponse.accessToken)
+            editor.putString(Constants.userId, loginResponse.userId)
+            editor.putString(Constants.profileId, loginResponse.profileId)
             editor.apply()
         }
 }

@@ -46,6 +46,7 @@ class SignupActivity : AppCompatActivity() {
         userViewModel.loginResponseLiveData.observe(this, Observer { registerResponse->
             Toast.makeText(baseContext,registerResponse?.message,Toast.LENGTH_LONG).show()
         })
+//        userViewModel.registerErrorLiveData.observe(this,{err})
     }
 
     fun signin() {
@@ -75,7 +76,7 @@ class SignupActivity : AppCompatActivity() {
             return
         }
         else{
-            binding.tilConfirm.error=null
+            binding.tilConfirm.error = null
         }
 
         if (firstName.isBlank()) {
